@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+
+
+
+<div class="row chart-options mx-5 my-5">
+<div class="period col-6 d-md-none">
+<div class="options-label"><i class="icon icon-calendar-alt"></i> Period</div>
+<div class="dropdown chart-options-dropdown">
+<a class="btn btn-outline-secondary btn-sm dropdown-toggle" id="chart-dropdown-period">Week</a>
+<div class="dropdown-menu" aria-labelledby="chart-dropdown-period">
+<a class="highcharts-label label label-default " title="live" href="/gold-price/live-gold-price/">Live</a>
+<a class="highcharts-label label label-default " title="today" href="/gold-price/gold-price-today/">Today</a>
+<a class="highcharts-label label label-default label-active" title="week" href="/gold-price/gold-price-per-ounce/">Week</a>
+<a class="highcharts-label label label-default " title="month" href="/gold-price/gold-price-eur/">Month</a>
+<a class="highcharts-label label label-default " title="threemonth" href="/gold-price/price-of-gold/">3 Month</a>
+<a class="highcharts-label label label-default " title="sixmonth" href="/gold-price/gold-price-chart/">6 Month</a>
+<a class="highcharts-label label label-default " title="year" href="/gold-price/one-year-gold-price/">Year</a>
+<a class="highcharts-label label label-default " title="3year" href="/gold-price/3-year-gold-price/">3Y</a>
+<a class="highcharts-label label label-default " title="5year" href="/gold-price/5-year-gold-price-chart/">5Y</a>
+<a class="highcharts-label label label-default " title="10year" href="/gold-price/10-year-gold-price-chart/">10Y</a>
+<a class="highcharts-label label label-default " title="15year" href="/gold-price/15year/ounces/EUR/">15Y</a>
+<a class="highcharts-label label label-default " title="20year" href="/gold-price/20year/ounces/EUR/">20Y</a>
+<a class="highcharts-label label label-default " title="alltime" href="/gold-price/gold-price-history/">Alltime</a>
+</div>
+</div>
+</div>
+<div class="period col-12 col-lg-auto d-none d-md-block">
+<div class="options-label"><i class="icon icon-calendar-alt"></i> Period</div>
+<div class="btn-group btn-group-sm" role="group">
+<a class="highcharts-label btn btn-outline-secondary " title="live" href="/gold-price/live-gold-price/">
+<i class="blink"></i>
+Live
+</a>
+<a class="highcharts-label btn btn-outline-secondary " title="today" href="/gold-price/gold-price-today/">
+Today
+</a>
+<a class="highcharts-label btn btn-outline-secondary label-active" title="week" href="/gold-price/gold-price-per-ounce/">
+Week
+</a>
+<a class="highcharts-label btn btn-outline-secondary " title="month" href="/gold-price/gold-price-eur/">
+Month
+</a>
+<a class="highcharts-label btn btn-outline-secondary " title="threemonth" href="/gold-price/price-of-gold/">
+
+3 Month
+</a>
+<a class="highcharts-label btn btn-outline-secondary " title="sixmonth" href="/gold-price/gold-price-chart/">
+6 Month
+</a>
+<a class="highcharts-label btn btn-outline-secondary " title="year" href="/gold-price/one-year-gold-price/">
+Year
+</a>
+<div class="btn-group btn-group-sm dropdown chart-options-dropdown" role="group">
+<a id="chart-dropdown-period" class="btn btn-outline-secondary dropdown-toggle ellipses" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+<div class="dropdown-menu" aria-labelledby="chart-dropdown-period">
+<a class="highcharts-label label label-default " title="3year" href="/gold-price/3-year-gold-price/">
+3Y
+</a>
+<a class="highcharts-label label label-default " title="5year" href="/gold-price/5-year-gold-price-chart/">
+5Y
+</a>
+<a class="highcharts-label label label-default " title="10year" href="/gold-price/10-year-gold-price-chart/">
+10Y
+</a>
+<a class="highcharts-label label label-default " title="15year" href="/gold-price/15year/ounces/EUR/">
+15Y
+</a>
+<a class="highcharts-label label label-default " title="20year" href="/gold-price/20year/ounces/EUR/">
+20Y
+</a>
+<a class="highcharts-label label label-default " title="alltime" href="/gold-price/gold-price-history/">
+Alltime
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="currency col-6 d-md-none">
+<div class="options-label"><i class="icon icon-money-bill-wave"></i> Currency</div>
+<div class="dropdown chart-options-dropdown">
+<a class="btn btn-outline-secondary btn-sm dropdown-toggle" id="chart-dropdown-currency">Euro</a>
+<div class="dropdown-menu" aria-labelledby="chart-dropdown-currency">
+<a class="highcharts-label label label-default   label-active" title="EUR" href="/gold-price/gold-price-per-ounce/">Euro</a>
+<a class="highcharts-label label label-default   " title="GBP" href="/gold-price/week/ounces/GBP/">British Pounds</a>
+<a class="highcharts-label label label-default   " title="USD" href="/gold-price/week/ounces/USD/">US Dollar</a>
+</div>
+</div>
+</div>
+<div class="currency col-auto d-none d-md-block">
+<div class="options-label"><i class="icon icon-money-bill-wave"></i> Currency</div>
+<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+<a class="highcharts-label btn btn-outline-secondary   label-active" title="EUR" href="/gold-price/gold-price-per-ounce/">Euro</a>
+<a class="highcharts-label btn btn-outline-secondary   " title="GBP" href="/gold-price/week/ounces/GBP/">British Pounds</a>
+<a class="highcharts-label btn btn-outline-secondary   " title="USD" href="/gold-price/week/ounces/USD/">US Dollar</a>
+</div>
+</div>
+<div class="commodity col col-lg-4 col-xl">
+<div class="options-label"><i class="icon icon-coins"></i>Metal</div>
+<div class="dropdown chart-options-dropdown">
+<a class="btn btn-outline-secondary btn-sm dropdown-toggle" id="chart-dropdown-commodity">Gold</a>
+<div class="dropdown-menu" aria-labelledby="chart-dropdown-commodity">
+<a href="/gold-price/gold-price-per-ounce/" class="highcharts-label label-active label label-default" title="XAU">Gold</a>
+<a href="/silver-price/silver-price-per-ounce/" class="highcharts-label  label label-default" title="XAG">Silver</a>
+<a href="/platinum-price/platinum-price-eur/" class="highcharts-label  label label-default" title="XPT">Platinum</a>
+<a href="/palladium-price/week/ounces/EUR/" class="highcharts-label  label label-default" title="XPD">Palladium</a>
+</div>
+</div>
+</div>
+<div class="weight col col-lg-4 col-xl">
+<div class="options-label"><i class="icon icon-weight"></i> Weight</div>
+<div class="dropdown chart-options-dropdown">
+<a class="btn btn-outline-secondary btn-sm dropdown-toggle" id="chart-dropdown-weight">Ounces</a>
+<div class="dropdown-menu" aria-labelledby="chart-dropdown-weight">
+<a class="highcharts-label label label-default " title="grams" href="/gold-price/gold-price-per-gram/">Grams</a>
+<a class="highcharts-label label label-default label-active" title="ounces" href="/gold-price/gold-price-per-ounce/">Ounces</a>
+<a class="highcharts-label label label-default " title="kilograms" href="/gold-price/gold-price-per-kilo/">Kilograms</a>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock %}

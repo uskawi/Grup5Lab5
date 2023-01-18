@@ -1,0 +1,35 @@
+.contact {
+  width: 90%;
+  margin: 40px 5%;
+}
+
+.contact-message {
+  height: 100px;
+}
+
+.submit-btn {
+  display: block;
+}
+
+.contact button {
+  width: 120px;
+  height: 40px;
+  display: block;
+}
+
+
+.figur {
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.small  {
+  width: 100%;
+}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block content %}
+<section>
+
+<div class="text-center text-danger">
+  <h1>Home Page Lab 5 Web App </h1>
+</div>
+
+<div id="small_img" class="small text-center my-5">
+  <img class="" src="{% static 'images/small.png' %}">
+</div>
+
+{% for item in images %}
+<div id="larg_img" class="figur mx-5 hide">
+<div class="row">
+      <div class="col col-sm-12  col-md-6 img-container">
+      <img src="{{ item.image.url }}" alt="{{ car.make }}">
+</div>
+</div>
+</div>
+
+{% endfor %}
+</section>
+
+
+    <script>
+  $('#small_img').click(function () {
+    $('#small_img').addClass('hide');
+    $('#larg_img').removeClass('hide');
+  });
+
+  // $('#hide-description').click(function () {
+  //   $('#car-description1').removeClass('hide');
+  //   $('#car-description2').addClass('hide');
+  // });
+</script>
+
+
+
+{% endblock %}
